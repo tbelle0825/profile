@@ -1,0 +1,530 @@
+@charset "utf-8";
+
+/* tabs.css - 탭 스타일 문서 
+---------------------------------------------------------------- */
+/* ///////////////////////////////////////// 
+	=.tab_menu
+///////////////////////////////////////// */
+.tabs .tab_menu li {
+  position: relative;
+  float: left;
+  margin-right: 2px;
+}
+.ie6 .tabs .tab_menu li {
+	display: inline;
+}
+.tabs .tab_menu li a {
+  display: block;
+  padding: 0.5em 1.5em;
+  background: #e5e9ea;
+  color: #607291;
+  font-size: 16px;
+  -webkit-border-radius: 7px 7px 0 0;
+  -khtml-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.tabs .tab_menu li:hover a, .tabs .tab_menu li a:focus, .tabs .tab_menu li.active a {
+  padding-left: 2.2em;
+  padding-right: 0.8em;
+  background: #f9f9f9;
+  -webkit-box-shadow: 1px -1px 2px #5c5c5c;
+  -moz-box-shadow: 1px -1px 2px #5c5c5c;
+  box-shadow: 1px -1px 2px #5c5c5c;
+}
+.tabs .tab_menu li img {
+  opacity: 0;
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.tabs .tab_menu li:hover img, .tabs .tab_menu li.active img {
+  opacity: 1;
+  left: 6px;
+}
+
+/* ///////////////////////////////////////// 
+	=.tab_contents
+///////////////////////////////////////// */
+.tabs .tab_contents {
+  position: relative;
+  min-height: 150px;
+  padding: 2em;
+  color: #607291;
+  background: #f9f9f9;
+  -webkit-box-shadow: 2px 2px 2px #5c5c5c;
+  -moz-box-shadow: 2px 2px 2px #5c5c5c;
+  box-shadow: 2px 2px 2px #5c5c5c;
+}
+.ie6 .tabs .tab_contents {
+	height: 150px;
+}
+.tabs .tab_contents li {
+  min-height: 114px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ededed;
+  background: #f9f9f9;
+}
+.js .tabs .tab_contents li {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  width: 95%;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.js .tabs .tab_contents li.active {
+  z-index: 10;
+}
+.tabs .tab_contents img {
+  float: left;
+  margin-right: 10px;
+}
+/* slide.css - 탭 스타일 문서 
+---------------------------------------------------------------- */
+/* ///////////////////////////////////////// 
+	=slider
+///////////////////////////////////////// */
+.slider-wrapper ul,
+.slider-wrapper li,
+.slider-wrapper div,
+.slider-wrapper img,
+.slider-wrapper a {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+}
+
+.slider-wrapper {
+	position: relative;
+	margin:10px auto;
+	width: 730px;
+	overflow: hidden;
+}
+
+/* Slider Load */
+
+@-webkit-keyframes 'load' {
+	0% { opacity: 0; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.slider-wrapper {
+	-webkit-animation-name: load;
+	-webkit-animation-duration: 2s;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+/* Slider Style */
+ul.s-thumbs {width:723px;margin: 10px auto 0 auto;overflow:hidden;}
+ul.s-thumbs li {
+	float: left;
+	margin: 0 5px 11px 5px;
+}
+
+ul.s-thumbs li:last-child {
+	margin-left: 1px; 
+	margin-right: 0;
+}
+
+ul.s-thumbs a {
+	display: block;
+	position: relative;
+	width: 127px;
+	height: 127px;
+	border: 4px solid transparent;
+
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+
+	font: bold 12px/25px Arial, sans-serif;
+	color: #515151;
+	text-decoration: none;
+	text-shadow: 1px 1px 0px rgba(255,255,255,.25), inset 1px 1px 0px rgba(0,0,0,.15);
+}
+
+ul.s-thumbs img {
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	-moz-box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+}
+
+ul.s-thumbs a:hover/*,
+ul.s-slides*/ {
+	border: 4px solid #141517;
+
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+
+	-webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+	-moz-box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+	box-shadow: 0px 1px 0px rgba(255,255,255,.05);
+}
+ul.s-slides {
+	width: 453px;
+	height: 537px;
+	margin: auto;
+	position: relative;
+}
+
+ul.s-slides li {
+	width: 232px;
+	height: 344px;
+	position: absolute;
+	top:92px;
+	left:32px;
+}
+ul.s-slides a,
+ul.s-slides img {width: 232px;}
+
+ul.s-slides {
+	background : url(../../include/images/phone.png) no-repeat top center;
+	overflow: hidden;
+	clear: both;
+}
+
+ul.s-slides li {
+	position: absolute;
+	z-index: 50;
+}
+
+/* Image Description */
+
+ul.s-thumbs li a:hover span {
+	position: absolute;
+	z-index: 101;
+	bottom: -10px;
+	left: 15px;
+	display: block;
+	width: 100px;
+	height: 25px;
+	text-align: center;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+	-moz-box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+	box-shadow: 0px 1px 0px rgba(0,0,0,.4);
+
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease-in-out;
+	-o-transition: all 0.25s ease-in-out;
+	-ms-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
+	
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #bcbcbc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#bcbcbc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#bcbcbc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#bcbcbc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#bcbcbc 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#bcbcbc 100%); /* W3C */
+}
+
+ul.s-thumbs li a:hover span:before {
+	width: 0;
+	height: 0;
+	border-bottom: 5px solid #ffffff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 44px;
+}
+
+ul.s-thumbs li:first-child a:hover span {
+	left: -3px;
+}
+
+ul.s-thumbs li:first-child a:hover span:before {
+	left: 25px;
+}
+
+ul.s-thumbs li:last-child a:hover span {
+	left: auto;
+	right: -3px;
+}
+
+ul.s-thumbs li:last-child a:hover span:before {
+	left: auto;
+	right: 26px;
+}
+
+/* Slide Left */
+
+@-webkit-keyframes 'slideLeft' {
+	0% { /* left: -241px; */opacity: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		-ms-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	}
+	100% { /* left: 0;*/
+		opacity: 1;
+	}
+}
+
+ul.s-slides li.slideLeft:target {
+	z-index: 100;
+
+	-webkit-animation-name: slideLeft;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+}
+
+/* Not Target */
+
+@-webkit-keyframes 'notTarget' {
+	0% { z-index: 75; }
+	100% { z-index: 75; }
+}
+
+ul.s-slides li:not(:target) {
+	-webkit-animation-name: notTarget;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+}
+/* First Slide */
+
+ul.s-slides li.first {
+	z-index: 60;
+}
+/* ///////////////////////////////////////// 
+	=.gallery-nav 2014-02-16추가-사용안함
+///////////////////////////////////////// */	
+.sbox {
+	position:relative;
+	width:;
+}
+.phonebox {
+	clear: both;
+	float:none;
+	width:900px;
+	height:800px;
+	margin:auto;
+	padding:10px 0;
+	background : url(../../include/images/phone.png) no-repeat top center;
+	overflow: hidden;
+}
+.gallery-nav {
+	position:absolute;
+	top:550px;
+	margin:0 auto;
+	width:900px;
+}
+.gallery-nav li {
+	float: left;
+	margin-right: 10px;
+}
+.gallery-nav li:first-child {
+	float: left;
+	margin-left: 15px;
+}
+/* ///////////////////////////////////////// 
+	=.tooltip
+///////////////////////////////////////// */	
+
+a.tooltip {
+	position: relative;
+	display: block;
+	width: 127px;
+	height: 127px;
+	border: 5px solid #4b4b4b;
+	background: #fff no-repeat center;
+	background-size: cover;
+	/* CSS3 Border-radius */
+	-webkit-border-radius: 25px;
+	-khtml-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	/* CSS3 Transition */	
+	-webkit-transition: all .4s ease-in .3s;
+	-moz-transition: all .4s ease-in .3s;
+	-o-transition: all .4s ease-in .3s;
+	-ms-transition: all .4s ease-in .3s;
+	transition: all .4s ease-in .3s;
+}
+a.tooltip:hover,
+a.tooltip:focus {
+		border-color: #fff;
+	}
+	a.tooltip .tooltip-box {
+		opacity: 0;
+		position: absolute;
+		width: 231px;
+		height:344px;
+		margin-left: -10.4em;
+		background: #111;
+		/* CSS3 Transition */
+		-webkit-transition: all .4s ease-in .3s;
+		-moz-transition: all .4s ease-in .3s;
+		-o-transition: all .4s ease-in .3s;
+		-ms-transition: all .4s ease-in .3s;
+		transition: all .4s ease-in .3s;
+	}
+	a.tooltip .tooltip-box.slide1 {
+		opacity: 0;
+		position: absolute;
+		left: 360px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip .tooltip-box.slide2 {
+		opacity: 0;
+		position: absolute;
+		left: 213px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip .tooltip-box.slide3 {
+		opacity: 0;
+		position: absolute;
+		left: 67px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide1, a.tooltip:focus .tooltip-box.slide1 {
+		opacity: 1;
+		position: absolute;
+		left: 360px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide2, a.tooltip:focus .tooltip-box.slide2 {
+		opacity: 1;
+		position: absolute;
+		left: 213px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide3, a.tooltip:focus .tooltip-box.slide3 {
+		opacity: 1;
+		position: absolute;
+		left: 67px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+
+	a.tooltip .tooltip-box.slide4 {
+		opacity: 0;
+		position: absolute;
+		left: -81px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip .tooltip-box.slide5 {
+		opacity: 0;
+		position: absolute;
+		left: -228px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip .tooltip-box.slide6 {
+		opacity: 0;
+		position: absolute;
+		left: -375px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide4, a.tooltip:focus .tooltip-box.slide4 {
+		opacity: 1;
+		position: absolute;
+		left: -81px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide5, a.tooltip:focus .tooltip-box.slide5 {
+		opacity: 1;
+		position: absolute;
+		left: -228px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+	a.tooltip:hover .tooltip-box.slide6, a.tooltip:focus .tooltip-box.slide6 {
+		opacity: 1;
+		position: absolute;
+		left: -375px;
+		bottom: 246px;
+		width: 231px;
+		height:344px;
+	}
+
+/* 사진 */
+a.tooltip.photo01 {
+	background: url(../../include/images/thumb1.png);
+}
+a.tooltip.photo02 {
+	background: url(../../include/images/thumb2.png);
+}
+a.tooltip.photo03 {
+	background: url(../../include/images/thumb3.png);
+}
+a.tooltip.photo04 {
+	background: url(../../include/images/thumb4.png);
+}
+a.tooltip.photo05 {
+	background: url(../../include/images/thumb5.png);
+}
+a.tooltip.photo06 {
+	background: url(../../include/images/thumb6.png);
+}
+
+
+/* ///////////////////////////////////////// 
+	=Global Classes
+///////////////////////////////////////// */
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	}
+	.ie6 .clearfix { height: 1px; } /* IE6 */ 
+	.ie7 .clearfix { min-height: 1px; } /* IE7 */

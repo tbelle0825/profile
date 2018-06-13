@@ -1,0 +1,48 @@
+<!-- 
+<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<script type="text/javascript" charset="utf-8" src="/pfjs/jquery.mousewheel.js"></script>
+<script type="text/javascript" charset="utf-8" src="/pfjs/jquery.backgroundSize.js"></script>
+<script type="text/javascript" charset="utf-8" src="/pfjs/scrap-1.0.05.js"></script>
+<script type="text/javascript" charset="utf-8" src="/pfjs/api/lcslog-0.4.13.js"></script>
+<!-- <script type="text/javascript" charset="utf-8" src="pfjs/api/javascript/nhn/nclicks/clickcr.js"></script> -->
+<!-- <script type="text/javascript" charset="utf-8" src="/pfjs/hangeul2014_common.js"></script> -->
+<script type="text/javascript">
+	var current = 0;
+
+	$(document).ready(function(){
+		
+		//상위 메뉴
+		$(".gnb_on").click(function() {
+			if(isGnbClose()) {
+				$("#header").animate({top: 0}, 500);
+			} else {
+				$("#header").animate({top: -60}, 500);
+			}
+			
+			return false;
+		});
+		
+
+		//sns 버튼
+		$(".inform").click(function() {
+			if($(".inform").hasClass("on")) {
+				$(".inform").removeClass("on");
+			} else {
+				$(".inform").addClass("on");
+			}			
+			return false;
+		});			
+		
+	});
+
+	function isGnbClose() {
+		if($("#header").css("top") == "-60px") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+		
+	// lcs_do();
+</script>

@@ -1,0 +1,62 @@
+@import "reset.css";
+@charset "utf-8";
+
+/* ani.css - 애니메이션 관련 스타일 문서
+---------------------------------------------------------------- */
+
+/* ///////////////////////////////////////// 
+	=애니메이션관련
+///////////////////////////////////////// */
+#container {border: 1px solid #000;padding:20px;}
+#ease {-webkit-transition: all 1s ease; font-size: 12px;}
+#linear {-webkit-transition:all 1s linear; font-size:12px;}
+#ease-in {-webkit-transition:all 1s ease-in; font-size:12px;}
+#ease-out {-webkit-transition: all 1s ease-out; font-size:12px;}
+#ease-in-out {-webkit-transition: all 1s ease-in-out; font-size:12px;}
+.box1, .box2, .box3, .box4, .box5 {width:48px;height:48px;border:1px solid #000;margin-bottom:20px;}
+#container:hover .box1 {margin-left:500px;color:#fff;background-color:#000;}
+#container:hover .box2 {margin-left:600px;color:#fff;background-color:#000;}
+#container:hover .box3 {margin-left:700px;color:#fff;background-color:#000;}
+#container:hover .box4 {margin-left:800px;color:#fff;background-color:#000;}
+#container:hover .box5 {margin-left:900px;color:#fff;background-color:#000;}
+
+/* ///////////////////////////////////////// 
+	=Transform
+///////////////////////////////////////// */
+
+.transbox {
+	width:100px;height:100px;background-color:#ff0000;color:#fff;
+	-webkit-transform: translate(150px, 50px);
+}
+.transbox:hover, .transbox:focus {
+	background-color:#000;color:#fff;
+	-webkit-transform: translate(150px, 50px) scale(2, 2) rotate(45deg) skew(-20deg, -20deg);
+	-webkit-transition: all 1s ease-in-out;width:100px;height:100px;
+}
+
+
+@-webkit-keyframes movebox {
+	from {												/*시작프레임*/
+		-webkit-transform:rotate(0deg);	/*처음 각도변화 없음*/
+	}
+	to {														/*끝나는 프레임*/
+		-webkit-transform:rotate(1080deg);	/*끝프레임에서 세바퀴 회전*/
+		background-color:black;
+	}
+}
+
+.move {
+	-webkit-animation-name: movebox;
+	-webkit-animation-duration: 6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function:ease-in-out; /*끝에서 빨라지게*/
+	-webkit-animation-direction: alternate; /*끝에서 반복*/
+}
+#move1 {
+	background-color: green;
+	width: 120px;
+	height: 100px;
+	padding:20px;
+	margin:100px;
+	font-size: 20px; font-weight:bold;color:#fff;
+}
